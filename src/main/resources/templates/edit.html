@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Student Details</title>
+</head>
+<body>
+    <h2>Edit Student Details</h2>
+    <form action="/updateStudent" method="post">
+        <input type="hidden" name="admissionNo" th:value="${student.admissionNo}" />
+        <label>Class:</label>
+        <input type="text" name="classNo" th:value="${student.classNo}" /><br/>
+        <label>Roll Number:</label>
+        <input type="text" name="rollNo" th:value="${student.rollNo}" /><br/>
+        <label>First Name:</label>
+        <input type="text" name="firstName" th:value="${student.firstName}" /><br/>
+        <label>Last Name:</label>
+        <input type="text" name="lastName" th:value="${student.lastName}" /><br/>
+        <label>Admission Number:</label>
+        <input type="text" name="admissionNo" th:value="${student.admissionNo}" disabled /><br/>
+        <label>Admission Date:</label>
+        <input type="text" name="date" th:value="${student.date}" /><br/>
+        <button type="submit">Save Changes</button>
+    </form>
+</body>
+</html>

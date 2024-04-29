@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration for Sri Sai Baba School</title>
+<link rel="stylesheet" href="style1.css">
+</head>
+<body bgcolor="gray">
+	<div class="form">
+		<form th:action="@{/register}" method="post" th:object="${student}">
+			<h2>Register Here</h2>
+			<label>Class:</label>
+			 <select id="classNo" name="classNo" th:field="*{classNo}">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+</select>
+ <br> 
+
+			<label>Roll Number:</label>
+			 <input type="text" th:field="*{rollNo}" required>
+			 
+			<label>First Name:</label>
+				<input type="text" th:field="*{firstName}" required>
+		    <label>Last Name:</label>
+				 <input type="text" th:field="*{lastName}" required>
+			<label>Admission Number:</label>
+				   <input type="text" th:field="*{admissionNo}" required>
+			<label>Admission Date:</label>
+			       <input type="date" th:field="*{date}"required>
+			       
+			<button class="btnn" type="submit">Register</button>
+		</form>
+	</div>
+</body>
+</html>

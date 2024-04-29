@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>HOME</title>
+<style>
+	body{
+		width: 100%;
+		background: url(image.jpg);	
+		background-position: center;
+        background-size: cover;
+        height: 100vh;
+	}
+	.head{
+		color: antiquewhite;
+		font-size: 70px;
+	}
+	b{
+		color: red;
+	}
+	.marquee{
+		color:rgb(255 255 0);
+		font-size: 50px;
+		
+		white-space: nowrap;
+		overflow: hidden;
+		animation: marquee 15s linear infinite;		
+	}
+	@keyframes marquee{
+		0%{
+			transform: translate(100%);
+		}
+		100%{
+			transform: translate(-100%);
+		}
+	}
+	
+	p{
+		color: darkred;
+		background-color: white;
+		
+		font-size: 30px;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+	/* .btn{
+	width: 240px;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-top: 10px;
+    margin-left:40%;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s ease;
+	}
+	a{
+	text-decoration: none;
+	}*/
+	
+	.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: large;
+     text-align: center;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+	
+</style>
+</head>
+<body bgcolor="gray">
+	<header>
+<h1 class="head">Sri Sai baba English medium High school</h1></header>
+<div class="marquee">
+	<h2>50% discount on early<i><b>Registration</b></i></h2></div>
+	<!--<button class="btn">
+	<a href="Registration.html"> Join us</a>
+	</button>-->
+     <a href="@{/registerpage}" class="button">Join us</a>
+
+	
+</body>
+</html>
